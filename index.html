@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Öjdahl Entreprenad - Professionella Mark- och Grävarbeten</title>
+  <meta name="description" content="Öjdahl Entreprenad erbjuder professionella mark- och grävarbeten: poolgrävning, avlopp, tomtjustering, dränering med kvalitet och pålitlighet.">
+  <meta property="og:title" content="Öjdahl Entreprenad">
+  <meta property="og:description" content="Professionella mark- och grävarbeten i Stockholm med omnejd.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://vidmarkenzo.github.io/ojdahl-hemsida/bilder/hero-bild.jpg">
+  <meta property="og:url" content="https://vidmarkenzo.github.io/ojdahl-hemsida/">
+  <link rel="icon" href="bilder/logo.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +20,13 @@
       <div class="logo">
         <img src="bilder/logo.jpeg" alt="Öjdahl Entreprenad Logotyp">
       </div>
-      <nav>
+      <nav aria-label="Huvudnavigation">
         <ul>
           <li><a href="#tjanster">Tjänster</a></li>
           <li><a href="#hur-vi-jobbar">Hur vi jobbar</a></li>
+          <li><a href="#personal">Personal</a></li>
           <li><a href="#projekt">Projekt</a></li>
+          <li><a href="#kontakta-oss">Kontakta oss</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -26,10 +35,49 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Professionella Mark- och Grävarbeten</h1>
-      <p>Vi erbjuder expertis inom poolgrävning, avloppsarbete, tomtjustering, dränering och allmänna markarbeten. Kvalitet och pålitlighet sedan många år.</p>
-      <a href="#kontakt" class="cta-button">Begär Offert</a>
+    <div class="hero-images">
+      <img src="bilder/hero-bild.jpg" alt="Öjdahl Entreprenad Arbete 1" class="hero-img">
+      <img src="bilder/hero-bild3.jpg" alt="Öjdahl Entreprenad Arbete 2" class="hero-img">
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Professionella Mark- och Grävarbeten</h1>
+        <p>Vi erbjuder expertis inom poolgrävning, avloppsarbete, tomtjustering, dränering och allmänna markarbeten. Kvalitet och pålitlighet sedan många år.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Section -->
+  <section id="personal" class="team">
+    <div class="container">
+      <h2>Vår personal</h2>
+      <p>Ett dedikerat team som är hängivna och noggranna med varje detalj i vårt arbete.</p>
+      <div class="team-grid">
+        <div class="person-card">
+          <div class="person-image">
+            <img src="bilder/chef.jpg" alt="Entreprenadansvarig" loading="lazy">
+          </div>
+          <h3>Entreprenadansvarig</h3>
+          <p class="role">Grundare & projektledare</p>
+          <p class="bio">Ansvarar för planering, kundkontakt och kvalitetskontroll, kör maskin och är med ute på jobben tillsammans med teamet.</p>
+        </div>
+        <div class="person-card">
+          <div class="person-image">
+            <img src="bilder/anstalld1.jpg" alt="Anställd 1" loading="lazy">
+          </div>
+          <h3>Alvin Karlsson</h3>
+          <p class="role">Maskinförare</p>
+          <p class="bio">Expert på grävarbeten, säker logistik och effektiva flöden på arbetsplatsen.</p>
+        </div>
+        <div class="person-card">
+          <div class="person-image">
+            <img src="bilder/anstalld2.jpg" alt="Anställd 2" loading="lazy">
+          </div>
+          <h3>Enzo Vidmark</h3>
+          <p class="role">Markarbetare</p>
+          <p class="bio">Fokuserar på detaljarbeten, dränering och finish för hållbara resultat.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -91,30 +139,120 @@
   <section id="projekt" class="projects">
     <div class="container">
       <h2>Tidigare Projekt</h2>
-      <p>Här visar vi några av våra genomförda arbeten med före- och efter-bilder.</p>
+      <p>Våra genomförda arbeten inom mark- och grävarbeten.</p>
+      
+      <!-- Filter buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Alla</button>
+        <button class="filter-btn" data-filter="pool">Poolgrävning</button>
+        <button class="filter-btn" data-filter="avlopp">Avlopp</button>
+        <button class="filter-btn" data-filter="dranering">Dränering/Grundisolering</button>
+        <button class="filter-btn" data-filter="tomt">Tomtjustering</button>
+      </div>
+
+      <!-- Gallery grid -->
       <div class="gallery">
-        <div class="gallery-item">
-          <div class="before-after">
-            <img src="bilder/projekt1-fore.jpg" alt="Projekt 1 Före" onerror="this.style.display='none'">
-            <img src="bilder/projekt1-efter.jpg" alt="Projekt 1 Efter" onerror="this.style.display='none'">
-          </div>
-          <p>Projekt 1</p>
+        <div class="gallery-item" data-category="pool">
+          <img src="bilder/poolgrävning1.jpg" alt="Poolgrävning" loading="lazy">
+          <div class="gallery-overlay"><span>Poolgrävning</span></div>
         </div>
-        <div class="gallery-item">
-          <div class="before-after">
-            <img src="bilder/projekt2-fore.jpg" alt="Projekt 2 Före" onerror="this.style.display='none'">
-            <img src="bilder/projekt2-efter.jpg" alt="Projekt 2 Efter" onerror="this.style.display='none'">
-          </div>
-          <p>Projekt 2</p>
+        <div class="gallery-item" data-category="pool">
+          <img src="bilder/poolgrävning2.jpg" alt="Poolgrävning" loading="lazy">
+          <div class="gallery-overlay"><span>Poolgrävning</span></div>
         </div>
-        <div class="gallery-item">
-          <div class="before-after">
-            <img src="bilder/projekt3-fore.jpg" alt="Projekt 3 Före" onerror="this.style.display='none'">
-            <img src="bilder/projekt3-efter.jpg" alt="Projekt 3 Efter" onerror="this.style.display='none'">
-          </div>
-          <p>Projekt 3</p>
+        <div class="gallery-item" data-category="avlopp">
+          <img src="bilder/Avlopp1.jpg" alt="Avloppsarbete" loading="lazy">
+          <div class="gallery-overlay"><span>Avloppsarbete</span></div>
+        </div>
+        <div class="gallery-item" data-category="dranering">
+          <img src="bilder/Grundisolering.jpg" alt="Dränering/Grundisolering" loading="lazy">
+          <div class="gallery-overlay"><span>Dränering/Grundisolering</span></div>
+        </div>
+        <div class="gallery-item" data-category="dranering">
+          <img src="bilder/dränering/Grundisolering.jpg" alt="Dränering/Grundisolering" loading="lazy">
+          <div class="gallery-overlay"><span>Dränering/Grundisolering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/Tomtjustering1-fore.jpg" alt="Tomtjustering - Före" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/Tomtjustering1-efter-.jpg" alt="Tomtjustering - Efter" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/Tomtjustering2-efter.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/tomtjustering3.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/Tomtjustering4.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/Tomjustering5.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/tomtjustering6.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
+        </div>
+        <div class="gallery-item" data-category="tomt">
+          <img src="bilder/tomtjustering.jpg" alt="Tomtjustering" loading="lazy">
+          <div class="gallery-overlay"><span>Tomtjustering</span></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Kontakta oss Section -->
+  <section id="kontakta-oss" class="contact-form-section">
+    <div class="container">
+      <h2>Kontakta Oss</h2>
+      <p>Hör av dig idag så svarar vi så snart vi kan!</p>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Namn *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-post *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Telefonnummer *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Företag</label>
+            <input type="text" id="company" name="company">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Ämne *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Välj ämne</option>
+            <option value="avlopp">Avlopp</option>
+            <option value="poolgrävning">Poolgrävning</option>
+            <option value="dränering">Dränering/Grundisolering</option>
+            <option value="tomtjustering">Tomtjustering</option>
+            <option value="markarbete">Markarbete</option>
+            <option value="övrigt">Övrigt</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Meddelande *</label>
+          <textarea id="message" name="message" rows="6" placeholder="Beskriv vad du behöver hjälp med..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Skicka meddelande</button>
+      </form>
+      <div id="formMessage" class="form-message"></div>
     </div>
   </section>
 
@@ -124,9 +262,9 @@
       <h2>Kontakt</h2>
       <p>Har du frågor eller vill ha en offert? Kontakta oss!</p>
       <div class="contact-info">
-        <p><strong>Telefon:</strong> 070-000 00 00</p>
-        <p><strong>E-post:</strong> info@ojdahlentreprenad.se</p>
-        <p><strong>Ort:</strong> Stockholm med omnejd</p>
+        <p><strong>Telefon:</strong> <a href="tel:+46735311233">073-5311233</a></p>
+        <p><strong>E-post:</strong> <a href="mailto:martin@ojdahl.com">martin@ojdahl.com</a></p>
+        <p><strong>Ort:</strong> Uppsala LÄN</p>
       </div>
     </div>
   </section>
@@ -143,7 +281,10 @@
   <!-- Modal for images -->
   <div id="imageModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
+    <button class="modal-nav modal-prev" aria-label="Föregående bild">‹</button>
+    <button class="modal-nav modal-next" aria-label="Nästa bild">›</button>
+    <img class="modal-content" id="modalImage" alt="">
+    <div class="modal-caption" id="modalCaption"></div>
   </div>
 </body>
 </html>
